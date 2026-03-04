@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manikanda Prabhu Bagavathi Krishnan| Data Science Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#020617;
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+border-bottom:1px solid #1e293b;
+background:#020617;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:80px 8%;
+flex-wrap:wrap;
+}
+
+.hero img{
+width:260px;
+border-radius:12px;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+margin-bottom:10px;
+}
+
+.resume-btn{
+margin-top:15px;
+display:inline-block;
+background:#38bdf8;
+color:black;
+padding:10px 22px;
+border-radius:6px;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 8%;
+}
+
+.title{
+font-size:32px;
+color:#38bdf8;
+margin-bottom:30px;
+}
+
+/* GRID LAYOUT */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#0f172a;
+padding:22px;
+border-radius:10px;
+}
+
+/* LIST FIX */
+
+.card ul{
+margin-top:10px;
+padding-left:18px;
+}
+
+.card li{
+margin-bottom:6px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.contact-card{
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+}
+
+.contact-card a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #1e293b;
+margin-top:40px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+width:200px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+nav ul{
+gap:15px;
+font-size:12px;
+}
+
+}
+
+@media (max-width:600px){
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.hero{
+padding:60px 6%;
+}
+
+section{
+padding:60px 6%;
+}
+
+.title{
+font-size:26px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+<img src="profile.jpg">
+<h3>Manikanda Prabhu Bagavathi Krishnan</h3>
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img src="profile.jpg">
+
+<div class="hero-text">
+
+<h1>Hi, I'm <span>Manikanda Prabhu Bagavathi Krishnan</span></h1>
+
+<p>Master’s Student in Data Science at RMIT University.</p>
+
+<p>
+Aspiring Data Analyst passionate about Artificial Intelligence,
+Machine Learning and Data Analytics.
+</p>
+
+<a class="resume-btn" href="Manikanda_Prabhu_Resume.pdf" target="_blank" download>
+Download Resume
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p>
+I am a Master of Data Science student at RMIT University with professional
+experience in data analysis and business intelligence. I specialise in analysing
+large datasets, identifying performance trends, and building data-driven
+solutions that support strategic decision-making. My experience includes
+working with Python, SQL, Power BI and machine learning techniques to
+extract insights from complex datasets.
+</p>
+
+<p>
+Through my academic and professional experience, I have developed strong
+skills in exploratory data analysis, statistical modelling and data visualisation.
+I enjoy solving real-world problems using analytical thinking and
+transforming raw data into meaningful insights that drive business value.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="grid">
+
+<div class="card">Python</div>
+<div class="card">SQL</div>
+<div class="card">R</div>
+<div class="card">Power BI</div>
+<div class="card">Excel</div>
+<div class="card">Pandas</div>
+<div class="card">NumPy</div>
+<div class="card">Scikit-learn</div>
+<div class="card">Machine Learning</div>
+<div class="card">Git & GitHub</div>
+<div class="card">Jupyter Notebook</div>
+<div class="card">Streamlit</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Credit Card Fraud Detection using GANs</h3>
+
+<p>
+Developed an advanced fraud detection system using a highly imbalanced
+credit card transaction dataset containing more than 284,000 records.
+The project focused on improving fraud detection accuracy by addressing
+class imbalance using Generative Adversarial Networks (GANs).
+</p>
+
+<p>
+Synthetic fraud samples were generated using GANs and compared with
+traditional resampling techniques such as SMOTE and ADASYN. Multiple
+machine learning models including Random Forest were evaluated using
+Precision, Recall, F1-Score and ROC-AUC metrics to identify the most
+effective fraud detection approach.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>InfoMate – AI Chatbot</h3>
+
+<p>
+Developed an AI-powered chatbot designed to assist students by answering
+university-related queries using structured and unstructured data sources.
+Natural Language Processing techniques were applied to preprocess text
+data and improve contextual understanding.
+</p>
+
+<p>
+The application was built using Python and deployed through Streamlit
+to enable an interactive user interface. The chatbot integrates language
+models and embedding techniques to deliver accurate responses in
+real-time for users.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Master of Data Science</h3>
+
+<p>RMIT University – Melbourne, Australia</p>
+<p>Expected Graduation: 2026</p>
+
+</div>
+
+<div class="card">
+
+<h3>Bachelor of Technology – Information Technology</h3>
+
+<p>Jeppiaar Institute of Technology – India</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2 class="title">Experience</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Data Analyst</h3>
+
+<p><strong>Smartfusion Corporate Solutions – Chennai</strong></p>
+
+<ul>
+<li>Processed and analysed over 1 million operational records using Python and SQL to identify key performance trends.</li>
+<li>Conducted exploratory data analysis and statistical modelling to uncover insights supporting strategic decisions.</li>
+<li>Automated data validation and cleaning pipelines improving reporting accuracy by 30%.</li>
+<li>Developed interactive Power BI dashboards to visualise operational metrics and improve stakeholder visibility.</li>
+<li>Presented analytical insights to cross-functional teams to support business process improvements.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Client Partner</h3>
+
+<p><strong>Access Healthcare – Chennai</strong></p>
+
+<ul>
+<li>Analysed healthcare claims datasets to identify approval and denial trends.</li>
+<li>Improved claim approval outcomes by 40% using structured performance tracking and trend analysis.</li>
+<li>Generated operational reports to monitor performance and reduce processing delays.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Junior Consultant (Internship)</h3>
+
+<p><strong>Tasksent – Chennai</strong></p>
+
+<ul>
+<li>Performed campaign and audience data analysis for digital marketing strategies.</li>
+<li>Improved website traffic by 25% through SEO optimisation and performance tracking.</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<p>
+<a href="mailto:maniprabhu3006@gmail.com">
+maniprabhu3006@gmail.com
+</a>
+</p>
+</div>
+
+<div class="contact-card">
+<h3>LinkedIn</h3>
+<p>
+<a href="https://linkedin.com/in/manikanda-prabhu" target="_blank">
+linkedin.com/in/manikanda-prabhu
+</a>
+</p>
+</div>
+
+<div class="contact-card">
+<h3>GitHub</h3>
+<p>
+<a href="https://github.com/Manikrishnan0530" target="_blank">
+github.com/Manikrishnan0530
+</a>
+</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Manikanda Prabhu Bagavathi Krishnan</p>
+
+</footer>
+
+</body>
+</html>
