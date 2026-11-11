@@ -1,495 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Manikanda Prabhu Bagavathi Krishnan| Data Science Portfolio</title>
-
+<title>Manikanda Prabhu Bagavathi Krishnan | Data Analyst and ML Engineer</title>
+<meta name="description" content="Portfolio of Manikanda Prabhu Bagavathi Krishnan, Master of Data Science graduate at RMIT University. SQL, Python, Power BI, Tableau, data quality and applied machine learning.">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+:root{
+  --bg:#0b1120;
+  --panel:#111a2e;
+  --panel-2:#16213a;
+  --line:#22304d;
+  --text:#e6ecf5;
+  --muted:#9aa8c0;
+  --accent:#38bdf8;
+  --accent-2:#a78bfa;
 }
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-background:#020617;
-color:white;
-line-height:1.6;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  line-height:1.65;
 }
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
 
-/* NAVBAR */
-
+/* NAV */
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-border-bottom:1px solid #1e293b;
-background:#020617;
+  position:sticky;top:0;z-index:10;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 8%;
+  background:rgba(11,17,32,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
 }
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img{
-width:40px;
-height:40px;
-border-radius:50%;
-}
-
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-size:14px;
-}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{color:var(--muted);font-size:14px}
+nav ul a:hover{color:var(--text);text-decoration:none}
 
 /* HERO */
-
 .hero{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:60px;
-padding:80px 8%;
-flex-wrap:wrap;
+  display:flex;align-items:center;justify-content:center;gap:56px;
+  padding:80px 8% 64px;flex-wrap:wrap;
 }
-
-.hero img{
-width:260px;
-border-radius:12px;
-}
-
-.hero-text{
-max-width:600px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.hero span{
-color:#38bdf8;
-}
-
-.hero p{
-margin-bottom:10px;
-}
-
-.resume-btn{
-margin-top:15px;
-display:inline-block;
-background:#38bdf8;
-color:black;
-padding:10px 22px;
-border-radius:6px;
-font-weight:bold;
-text-decoration:none;
-}
+.hero img{width:240px;height:240px;object-fit:cover;border-radius:16px;border:1px solid var(--line)}
+.hero-text{max-width:620px}
+.eyebrow{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-size:44px;line-height:1.15;margin:8px 0 14px}
+.hero p{color:var(--muted);margin-bottom:10px;font-size:17px}
+.hero .lead{color:var(--text)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.badge{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);color:var(--muted)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;padding:10px 20px;border-radius:8px;font-weight:700;font-size:15px}
+.btn.primary{background:var(--accent);color:#04121c}
+.btn.ghost{border:1px solid var(--line);color:var(--text)}
+.btn:hover{text-decoration:none;filter:brightness(1.1)}
 
 /* SECTIONS */
+section{padding:64px 8%}
+.title{font-size:28px;margin-bottom:8px}
+.subtitle{color:var(--muted);margin-bottom:28px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{font-size:19px;margin-bottom:4px}
+.card .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+.card p{color:var(--muted);margin-bottom:10px}
+.card ul{padding-left:18px;color:var(--muted)}
+.card li{margin-bottom:6px}
+.card li strong,.card p strong{color:var(--text)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:12px;padding:3px 9px;border-radius:6px;background:var(--panel-2);color:var(--accent)}
+.featured{border-color:var(--accent);background:linear-gradient(180deg,#132341,#111a2e)}
+.featured .label{display:inline-block;font-size:12px;font-weight:700;color:#04121c;background:var(--accent);padding:2px 8px;border-radius:6px;margin-bottom:10px}
 
-section{
-padding:80px 8%;
-}
+/* SKILLS */
+.skill-group h3{font-size:16px;margin-bottom:10px;color:var(--text)}
 
-.title{
-font-size:32px;
-color:#38bdf8;
-margin-bottom:30px;
-}
-
-/* GRID LAYOUT */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#0f172a;
-padding:22px;
-border-radius:10px;
-}
-
-/* LIST FIX */
-
-.card ul{
-margin-top:10px;
-padding-left:18px;
-}
-
-.card li{
-margin-bottom:6px;
-}
+/* EXPERIENCE */
+.job{border-left:2px solid var(--line);padding:0 0 28px 24px;position:relative;max-width:900px}
+.job::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.job h3{font-size:19px}
+.job .meta{color:var(--muted);font-size:14px;margin-bottom:10px}
+.job ul{padding-left:18px;color:var(--muted)}
+.job li{margin-bottom:6px}
 
 /* CONTACT */
+.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.contact-card h3{font-size:16px;margin-bottom:6px}
+.note{margin-top:24px;color:var(--muted);font-size:15px}
 
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.contact-card{
-background:#0f172a;
-padding:20px;
-border-radius:10px;
-}
-
-.contact-card a{
-color:#38bdf8;
-text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-border-top:1px solid #1e293b;
-margin-top:40px;
-}
-
-/* RESPONSIVE DESIGN */
+footer{text-align:center;padding:30px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 
 @media (max-width:900px){
-
-.hero{
-flex-direction:column;
-text-align:center;
+  .hero{flex-direction:column;text-align:center;padding-top:56px}
+  .hero img{width:180px;height:180px}
+  .hero h1{font-size:34px}
+  .badges,.btns{justify-content:center}
+  nav ul{gap:14px}
 }
-
-.hero img{
-width:200px;
+@media (max-width:640px){
+  nav{flex-direction:column;gap:8px;padding:12px 5%}
+  nav ul{flex-wrap:wrap;justify-content:center;gap:12px}
+  section,.hero{padding-left:5%;padding-right:5%}
+  .grid{grid-template-columns:1fr}
+  .title{font-size:24px}
 }
-
-.hero h1{
-font-size:36px;
-}
-
-nav ul{
-gap:15px;
-font-size:12px;
-}
-
-}
-
-@media (max-width:600px){
-
-nav{
-flex-direction:column;
-gap:10px;
-}
-
-.hero{
-padding:60px 6%;
-}
-
-section{
-padding:60px 6%;
-}
-
-.title{
-font-size:26px;
-}
-
-}
-
 </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
-
-<div class="logo">
-<img src="profile.jpg">
-<h3>Manikanda Prabhu Bagavathi Krishnan</h3>
-</div>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+  <div class="logo">
+    <img src="profile.jpg" alt="Manikanda Prabhu Bagavathi Krishnan">
+    <span>Manikanda Prabhu</span>
+  </div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<!-- HERO -->
-
-<section class="hero">
-
-<img src="profile.jpg">
-
-<div class="hero-text">
-
-<h1>Hi, I'm <span>Manikanda Prabhu Bagavathi Krishnan</span></h1>
-
-<p>Master’s Student in Data Science at RMIT University.</p>
-
-<p>
-Aspiring Data Analyst passionate about Artificial Intelligence,
-Machine Learning and Data Analytics.
-</p>
-
-<a class="resume-btn" href="Manikanda_Prabhu_Resume.pdf" target="_blank" download>
-Download Resume
-</a>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
+<header class="hero">
+  <img src="profile.jpg" alt="Photo of Manikanda Prabhu Bagavathi Krishnan">
+  <div class="hero-text">
+    <div class="eyebrow">Data Analyst | Machine Learning Engineer</div>
+    <h1>Hi, I'm Manikanda Prabhu Bagavathi Krishnan</h1>
+    <p class="lead">I turn messy data into numbers people can trust, and I build small AI tools that do real work.</p>
+    <p>Master of Data Science at RMIT University, finishing December 2026. Close to two years of hands-on SQL and Python work, plus an ML internship building with GPT, Gemini and Claude.</p>
+    <div class="badges">
+      <span class="badge">Melbourne, VIC</span>
+      <span class="badge">Available full time</span>
+      <span class="badge">No sponsorship needed</span>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="Manikanda_Prabhu_Resume.pdf" target="_blank" download>Download Resume</a>
+      <a class="btn ghost" href="#projects">See my work</a>
+    </div>
+  </div>
+</header>
 
 <section id="about">
-
-<h2 class="title">About Me</h2>
-
-<p>
-I am a Master of Data Science student at RMIT University with professional
-experience in data analysis and business intelligence. I specialise in analysing
-large datasets, identifying performance trends, and building data-driven
-solutions that support strategic decision-making. My experience includes
-working with Python, SQL, Power BI and machine learning techniques to
-extract insights from complex datasets.
-</p>
-
-<p>
-Through my academic and professional experience, I have developed strong
-skills in exploratory data analysis, statistical modelling and data visualisation.
-I enjoy solving real-world problems using analytical thinking and
-transforming raw data into meaningful insights that drive business value.
-</p>
-
+  <h2 class="title">About me</h2>
+  <div class="card" style="max-width:900px">
+    <p>I started out as a data analyst in Chennai, working through over a million operational records in SQL and Python to find where processes were slowing down. That work backed a redesign that cut manual processing by 30%, and it taught me something I still care about most: an analysis is only as good as the data behind it.</p>
+    <p>Since moving to Melbourne for my Master's, I've been building with AI. At Focus Bear I built a wearable breathing and posture tracker with the CEO and a multi-model AI classifier that reached 94.7% accuracy. On my RMIT capstone I led data processing for an AI pipeline that checks school maths books before they go to print. I also built my own job application tool, which I use every day.</p>
+    <p>I enjoy explaining data to people who don't work with it every day, and I'm looking for a graduate role in data analytics, data science or machine learning where I can keep doing both.</p>
+  </div>
 </section>
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2 class="title">Skills</h2>
-
-<div class="grid">
-
-<div class="card">Python</div>
-<div class="card">SQL</div>
-<div class="card">R</div>
-<div class="card">Power BI</div>
-<div class="card">Excel</div>
-<div class="card">Pandas</div>
-<div class="card">NumPy</div>
-<div class="card">Scikit-learn</div>
-<div class="card">Machine Learning</div>
-<div class="card">Git & GitHub</div>
-<div class="card">Jupyter Notebook</div>
-<div class="card">Streamlit</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
 
 <section id="projects">
+  <h2 class="title">Projects</h2>
+  <p class="subtitle">Real work with real results. Each one below is something I built or led myself.</p>
+  <div class="grid">
 
-<h2 class="title">Projects</h2>
+    <div class="card featured">
+      <span class="label">Featured</span>
+      <h3>Maestro Career Studio</h3>
+      <div class="meta">Personal project | AI job application tool</div>
+      <p>A web app and Chrome extension that scores a resume against a job ad, shows what's missing, and helps fill in application forms. I built it with AI coding tools and use it for my own job search.</p>
+      <ul>
+        <li>Reads job ads straight from sites like LinkedIn, including pages that hide their structure</li>
+        <li>Recognises application forms such as LinkedIn Easy Apply and Australian work rights questions</li>
+        <li>Backed by automated tests that run on every change</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">JavaScript</span><span class="tag">Chrome extension</span><span class="tag">LLMs</span></div>
+    </div>
 
-<div class="grid">
+    <div class="card">
+      <h3>AI Coursebook Answer Checker</h3>
+      <div class="meta">RMIT capstone with Spectrum Tuition Digital | Aug to Nov 2026</div>
+      <p>Five-person team building an AI pipeline that checks K-12 maths coursebooks before they go to print. I was the data processing lead.</p>
+      <ul>
+        <li>Answer checker now confirms <strong>192 of 1,000</strong> Year 8 questions without human review, up from 123, with no mismatches reported</li>
+        <li>Validator for 8 question types using exact fraction arithmetic, with anything uncertain sent to a person</li>
+        <li><strong>122 automated tests</strong> so no fix could quietly break an answer we had already confirmed</li>
+        <li>Built a simple browser tool so non-developers could run the checks themselves</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SymPy</span><span class="tag">pytest</span><span class="tag">Data quality</span></div>
+    </div>
 
-<div class="card">
+    <div class="card">
+      <h3>Wearable Breathing and Posture Tracker</h3>
+      <div class="meta">Focus Bear | Jul 2026 to present</div>
+      <p>A working MVP built with the CEO, from a wearable sensor through a Python signal processing engine to a macOS menu-bar app.</p>
+      <ul>
+        <li>Found and fixed a calibration bug that made every posture reading quietly wrong</li>
+        <li>Redesigned the setup screen into one instruction and one button after CEO feedback</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Signal processing</span><span class="tag">IMU sensors</span><span class="tag">macOS app</span></div>
+    </div>
 
-<h3>Credit Card Fraud Detection using GANs</h3>
+    <div class="card">
+      <h3>Attention Score Classifier</h3>
+      <div class="meta">Focus Bear | Apr to Jun 2026</div>
+      <p>An AI classifier that combines GPT and Gemini vision models, with Claude as a tiebreaker, to read attention from screen and workspace images.</p>
+      <ul>
+        <li><strong>94.7%</strong> consensus accuracy on a labelled test set, better than either model alone</li>
+        <li>Lifted category accuracy from <strong>72% to 91.4%</strong> over six rounds of prompt tuning</li>
+        <li>Handed over through a documented GitHub pull request</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">GPT</span><span class="tag">Gemini</span><span class="tag">Claude</span><span class="tag">Prompt engineering</span></div>
+    </div>
 
-<p>
-Developed an advanced fraud detection system using a highly imbalanced
-credit card transaction dataset containing more than 284,000 records.
-The project focused on improving fraud detection accuracy by addressing
-class imbalance using Generative Adversarial Networks (GANs).
-</p>
+    <div class="card">
+      <h3>Credit Card Fraud Detection with GANs</h3>
+      <div class="meta">RMIT project</div>
+      <p>Fraud makes up just 0.17% of a 284,000 transaction dataset, so most models simply miss it. I used GANs to generate realistic fraud examples and compared them with SMOTE and ADASYN.</p>
+      <ul>
+        <li>Reached an <strong>F1 score of 0.805</strong></li>
+        <li>Beat SMOTE by <strong>11.3%</strong> on precision</li>
+        <li>Evaluated with precision, recall, F1 and ROC-AUC rather than accuracy alone</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">scikit-learn</span><span class="tag">pandas</span></div>
+    </div>
 
-<p>
-Synthetic fraud samples were generated using GANs and compared with
-traditional resampling techniques such as SMOTE and ADASYN. Multiple
-machine learning models including Random Forest were evaluated using
-Precision, Recall, F1-Score and ROC-AUC metrics to identify the most
-effective fraud detection approach.
-</p>
+    <div class="card">
+      <h3>InfoMate, University Chatbot</h3>
+      <div class="meta">RMIT project</div>
+      <p>A chatbot that answers student questions about the university using more than 10,000 structured and unstructured documents.</p>
+      <ul>
+        <li>Built on GPT-4o embeddings and deployed as a Streamlit app with MongoDB session storage</li>
+        <li>Tested with 10 faculty members</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">GPT-4o</span><span class="tag">Streamlit</span><span class="tag">MongoDB</span><span class="tag">NLP</span></div>
+    </div>
 
-</div>
-
-<div class="card">
-
-<h3>InfoMate – AI Chatbot</h3>
-
-<p>
-Developed an AI-powered chatbot designed to assist students by answering
-university-related queries using structured and unstructured data sources.
-Natural Language Processing techniques were applied to preprocess text
-data and improve contextual understanding.
-</p>
-
-<p>
-The application was built using Python and deployed through Streamlit
-to enable an interactive user interface. The chatbot integrates language
-models and embedding techniques to deliver accurate responses in
-real-time for users.
-</p>
-
-</div>
-
-</div>
-
+  </div>
 </section>
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-<h2 class="title">Education</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Master of Data Science</h3>
-
-<p>RMIT University – Melbourne, Australia</p>
-<p>Expected Graduation: 2026</p>
-
-</div>
-
-<div class="card">
-
-<h3>Bachelor of Technology – Information Technology</h3>
-
-<p>Jeppiaar Institute of Technology – India</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
 
 <section id="experience">
+  <h2 class="title">Experience</h2>
+  <p class="subtitle">Most recent first.</p>
 
-<h2 class="title">Experience</h2>
+  <div class="job">
+    <h3>Machine Learning Engineer Intern</h3>
+    <div class="meta">Focus Bear, Melbourne | Apr 2026 to present</div>
+    <ul>
+      <li>Built a wearable breathing and posture detection MVP with the CEO, from hardware to a macOS menu-bar app</li>
+      <li>Built a multi-model AI classifier that reached 94.7% accuracy and lifted category accuracy from 72% to 91.4%</li>
+    </ul>
+  </div>
 
-<div class="grid">
+  <div class="job">
+    <h3>Machine Learning Engineer, Data Processing Lead (Capstone)</h3>
+    <div class="meta">Spectrum Tuition Digital with RMIT University, Melbourne | Aug 2026 to Nov 2026</div>
+    <ul>
+      <li>Led data processing for an AI pipeline that checks maths coursebooks before print</li>
+      <li>Built the answer checker and validator, backed by 122 automated tests</li>
+    </ul>
+  </div>
 
-<div class="card">
+  <div class="job">
+    <h3>Data Analyst</h3>
+    <div class="meta">Smartfusion Corporate Solutions, Chennai | Feb 2024 to Feb 2025</div>
+    <ul>
+      <li>Analysed 1M+ operational records using Python and SQL, applying statistical analysis including significance tests, to find trends and bottlenecks across five business units. This supported a process redesign that cut manual processing by 30%</li>
+      <li>Built automated ETL data validation and cleaning pipelines in Python, improving reporting accuracy by 20%</li>
+      <li>Handled the data modelling behind Power BI and Tableau dashboards, setting up the tables and relationships, so five business units could track their KPIs in real time</li>
+    </ul>
+  </div>
 
-<h3>Data Analyst</h3>
+  <div class="job">
+    <h3>Client Partner</h3>
+    <div class="meta">Access Healthcare, Chennai | Nov 2021 to Apr 2023</div>
+    <ul>
+      <li>Main point of contact for client accounts on claims performance</li>
+      <li>Found where claims were being held up and changed how we tracked them, lifting approval rates by 40%</li>
+    </ul>
+  </div>
 
-<p><strong>Smartfusion Corporate Solutions – Chennai</strong></p>
-
-<ul>
-<li>Processed and analysed over 1 million operational records using Python and SQL to identify key performance trends.</li>
-<li>Conducted exploratory data analysis and statistical modelling to uncover insights supporting strategic decisions.</li>
-<li>Automated data validation and cleaning pipelines improving reporting accuracy by 30%.</li>
-<li>Developed interactive Power BI dashboards to visualise operational metrics and improve stakeholder visibility.</li>
-<li>Presented analytical insights to cross-functional teams to support business process improvements.</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Client Partner</h3>
-
-<p><strong>Access Healthcare – Chennai</strong></p>
-
-<ul>
-<li>Analysed healthcare claims datasets to identify approval and denial trends.</li>
-<li>Improved claim approval outcomes by 40% using structured performance tracking and trend analysis.</li>
-<li>Generated operational reports to monitor performance and reduce processing delays.</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Junior Consultant (Internship)</h3>
-
-<p><strong>Tasksent – Chennai</strong></p>
-
-<ul>
-<li>Performed campaign and audience data analysis for digital marketing strategies.</li>
-<li>Improved website traffic by 25% through SEO optimisation and performance tracking.</li>
-</ul>
-
-</div>
-
-</div>
-
+  <div class="job">
+    <h3>Junior Consultant (Internship)</h3>
+    <div class="meta">Tasksent, Chennai</div>
+    <ul>
+      <li>Analysed campaign and audience data to support digital marketing decisions</li>
+      <li>Improved website traffic by 25% through SEO and performance tracking</li>
+    </ul>
+  </div>
 </section>
 
-<!-- CONTACT -->
+<section id="skills">
+  <h2 class="title">Skills</h2>
+  <div class="grid">
+    <div class="card skill-group">
+      <h3>Languages</h3>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">JavaScript</span></div>
+    </div>
+    <div class="card skill-group">
+      <h3>Data and BI</h3>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Excel</span><span class="tag">Data modelling</span><span class="tag">ETL</span><span class="tag">Statistical analysis</span></div>
+    </div>
+    <div class="card skill-group">
+      <h3>Data quality</h3>
+      <div class="tags"><span class="tag">Data validation</span><span class="tag">Data governance</span><span class="tag">Test automation (pytest)</span><span class="tag">EDA</span></div>
+    </div>
+    <div class="card skill-group">
+      <h3>Machine learning and AI</h3>
+      <div class="tags"><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Prompt engineering</span><span class="tag">LLM evaluation</span></div>
+    </div>
+    <div class="card skill-group">
+      <h3>Tools</h3>
+      <div class="tags"><span class="tag">Git and GitHub</span><span class="tag">Jupyter</span><span class="tag">Streamlit</span><span class="tag">MongoDB</span><span class="tag">Claude Code</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="title">Education and certifications</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Master of Data Science</h3>
+      <div class="meta">RMIT University, Melbourne | Feb 2025 to Dec 2026 | GPA 3.4/4.0</div>
+      <p>Database Concepts, Big Data Management, Data Visualisation, Practical Data Science, Machine Learning, Time Series Analysis</p>
+    </div>
+    <div class="card">
+      <h3>Bachelor of Technology, Information Technology</h3>
+      <div class="meta">Jeppiaar Institute of Technology, Chennai | 2016 to 2020</div>
+      <p>Majors in Computer Systems and Information Systems</p>
+    </div>
+    <div class="card">
+      <h3>Job simulations (Forage)</h3>
+      <ul>
+        <li>Deloitte Australia, Data Analytics: built data visualisations in Tableau</li>
+        <li>Commonwealth Bank, Introduction to Data Science</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <ul>
+        <li>Event Volunteer, PMI Melbourne Chapter (2025 to present)</li>
+        <li>Event Crew, RMIT Open Day (2025)</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <section id="contact">
-
-<h2 class="title">Contact</h2>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<h3>Email</h3>
-<p>
-<a href="mailto:maniprabhu3006@gmail.com">
-manikrishnan0530@gmail.com
-</a>
-</p>
-</div>
-
-<div class="contact-card">
-<h3>LinkedIn</h3>
-<p>
-<a href="https://linkedin.com/in/manikanda-prabhu" target="_blank">
-linkedin.com/in/manikanda-prabhu
-</a>
-</p>
-</div>
-
-<div class="contact-card">
-<h3>GitHub</h3>
-<p>
-<a href="https://github.com/Manikrishnan0530" target="_blank">
-github.com/Manikrishnan0530
-</a>
-</p>
-</div>
-
-</div>
-
+  <h2 class="title">Contact</h2>
+  <p class="subtitle">I'm open to graduate and junior roles in data analytics, data science and machine learning across Melbourne and Australia.</p>
+  <div class="grid">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <a href="mailto:manikrishnan0530@gmail.com">manikrishnan0530@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <h3>LinkedIn</h3>
+      <a href="https://linkedin.com/in/manikanda-prabhu" target="_blank" rel="noopener">linkedin.com/in/manikanda-prabhu</a>
+    </div>
+    <div class="contact-card">
+      <h3>GitHub</h3>
+      <a href="https://github.com/Manikrishnan0530" target="_blank" rel="noopener">github.com/Manikrishnan0530</a>
+    </div>
+  </div>
+  <p class="note">Work rights: Student Visa (subclass 500), moving to a Temporary Graduate Visa (subclass 485) with full work rights. No sponsorship required.</p>
 </section>
 
 <footer>
-
-<p>© 2026 Manikanda Prabhu Bagavathi Krishnan</p>
-
+  <p>&copy; 2026 Manikanda Prabhu Bagavathi Krishnan</p>
 </footer>
 
 </body>
